@@ -1,4 +1,4 @@
-Smiles,label
+smiles,logD
 CC(C)Oc1cc(Oc2ccc(S(C)(=O)=O)cc2)cc(-c2ncc(Cl)c(=O)[nH]2)c1,2
 CNS(=O)(=O)c1ccc(Oc2cc(OC(C)C)cc(-c3nccc(=O)[nH]3)c2)cc1,2.6
 CC(C)Oc1cc(Oc2cnc(C(=O)N(C)C)c(F)c2)cc(-c2nccc(=O)[nH]2)c1,1.5
