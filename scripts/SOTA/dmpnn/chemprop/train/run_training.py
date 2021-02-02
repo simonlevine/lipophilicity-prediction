@@ -20,7 +20,7 @@ from .evaluate import evaluate, evaluate_predictions
 from .predict import predict
 from .train import train
 from args import TrainArgs
-from constants import MODEL_FILE_NAME
+from my_constants import MODEL_FILE_NAME
 from data import get_class_sizes, get_data, MoleculeDataLoader, split_data, StandardScaler, validate_dataset_type
 from models import MoleculeModel
 from nn_utils import param_count

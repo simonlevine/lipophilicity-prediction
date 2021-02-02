@@ -1,6 +1,6 @@
 stages:
   preparation:
-    cmd: ~/anaconda3/envs/chemprop/bin/python ./scripts/SOTA/dmpnn/train_val_data_preparation.py
+    cmd: python ./scripts/SOTA/dmpnn/train_val_data_preparation.py
     deps:
     - ./data/3_final_data/split_data/logp_wo_logp_json_wo_averaging_train.csv
     - ./data/3_final_data/split_data/logp_wo_logp_json_wo_averaging_validation.csv
@@ -12,7 +12,7 @@ stages:
     params:
     - split_file_prefix
   dmpnn_train:
-    cmd: ~/anaconda3/envs/chemprop/bin/python ./scripts/SOTA/dmpnn/train.py
+    cmd: python ./scripts/SOTA/dmpnn/train.py
       --dataset_type regression --num_workers 4 --config_path_yaml ./params.yaml
     deps:
     - ./data/3_final_data/split_data/logd_Lip_wo_averaging_test.csv
