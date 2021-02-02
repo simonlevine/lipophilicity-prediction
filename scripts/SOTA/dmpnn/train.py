@@ -14,6 +14,7 @@ import pandas as pd
 import os
 import numpy as np
 import yaml
+from loguru import logger
 
 if __name__ == '__main__':
     logger.warning('Commencing Training...')
