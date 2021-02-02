@@ -16,4 +16,5 @@ import numpy as np
 import yaml
 
 if __name__ == '__main__':
+    logger.warning('Commencing Training...')
     chemprop_train()
