@@ -14,6 +14,8 @@ from args import PredictArgs, TrainArgs
 from data import get_data, get_data_from_smiles, MoleculeDataLoader, MoleculeDataset
 from utils import load_args, load_checkpoint, load_scalers, makedirs, timeit
 
+from loguru import logger
+
 
 @timeit()
 def make_predictions(args: PredictArgs, smiles: List[str] = None) -> List[List[Optional[float]]]:
@@ -132,6 +134,7 @@ def make_predictions(args: PredictArgs, smiles: List[str] = None) -> List[List[O
             datapoint.row[pred_name] = pred
 
     # Save
+    logger.warning("saving predictions....")
     with open(args.preds_path, 'w') as f:
         writer = csv.DictWriter(f, fieldnames=full_data[0].row.keys())
         writer.writeheader()
@@ -147,4 +150,5 @@ def chemprop_predict() -> None:
 
     This is the entry point for the command line command :code:`chemprop_predict`.
     """
+
     make_predictions(args=PredictArgs().parse_args())

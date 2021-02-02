@@ -13,6 +13,6 @@ split_type: k-fold
 num_folds: 4
 data_path: ./data/raw/baselines/dmpnn/
 additional_encoder: True
-separate_test_path: ./vant_data/test/ #holdout_set.csv #./data/3_final_data/split_data
+separate_test_path: ./data/3_final_data/split_data
 substructures_hidden_size: 300
 hidden_size: 800
