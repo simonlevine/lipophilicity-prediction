@@ -2,7 +2,7 @@ file_prefix: logd_Lip_wo_averaging
 split_file_prefix: logd_Lip_wo_averaging
 input_path: ./data/3_final_data/split_data
 save_dir: ./data/raw/baselines/dmpnn/logs/exp_0
-epochs: 1 #100
+epochs: 100
 patience: 1000
 delta: 0.001
 depth: 6
