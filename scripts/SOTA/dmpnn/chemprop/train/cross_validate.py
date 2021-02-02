@@ -12,7 +12,7 @@ sys.path.insert(0,parentdir)
 
 from .run_training import run_training
 from args import TrainArgs
-from constants import TEST_SCORES_FILE_NAME, TRAIN_LOGGER_NAME
+from my_constants import TEST_SCORES_FILE_NAME, TRAIN_LOGGER_NAME
 from data import get_task_names
 from utils import create_logger, makedirs, timeit
 
