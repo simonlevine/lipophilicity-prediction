@@ -67,7 +67,7 @@ class CommonArgs(Tap):
     """List of paths to model checkpoints (:code:`.pt` files)."""
     no_cuda: bool = False
     """Turn off cuda (i.e., use CPU instead of GPU)."""
-    gpu: int = None
+    gpu: int = 0
     """Which GPU to use."""
     features_generator: List[str] = None
     """Method(s) of generating additional features."""
