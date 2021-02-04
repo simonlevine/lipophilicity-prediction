@@ -4,6 +4,7 @@ from tempfile import TemporaryDirectory
 import pickle
 from typing import List, Optional, Tuple
 from typing_extensions import Literal
+from loguru import logger
 
 import torch
 from tap import Tap  # pip install typed-argument-parser (https://github.com/swansonk14/typed-argument-parser)
@@ -67,7 +68,7 @@ class CommonArgs(Tap):
     """List of paths to model checkpoints (:code:`.pt` files)."""
     no_cuda: bool = False
     """Turn off cuda (i.e., use CPU instead of GPU)."""
-    gpu: int = 0
+    gpu: int = None
     """Which GPU to use."""
     features_generator: List[str] = None
     """Method(s) of generating additional features."""

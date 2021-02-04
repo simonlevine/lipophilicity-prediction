@@ -41,3 +41,32 @@ stages:
     metrics:
     - ./data/raw/baselines/dmpnn/logs/exp_221/final_scores.json:
         cache: false
+
+  dmpnn_predict:
+    cmd: python ./scripts/SOTA/dmpnn/predict.py
+      --dataset_type regression --num_workers 4 --config_path_yaml ./params.yaml
+    deps:
+    - ./vant_data/test/holdout_set.csv
+    - ./scripts/SOTA/dmpnn/
+    params:
+    - data_path
+    - depth
+    - epochs
+    - features_generator
+    - file_prefix
+    - no_features_scaling
+    - num_folds
+    - save_dir
+    - separate_test_path
+    - split_type
+    - target_columns
+    - additional_encoder
+    - substructures_hidden_size
+    - hidden_size
+    outs:
+    - ./data/raw/baselines/dmpnn/logs/exp_221/folds
+
+    metrics:
+    - ./data/raw/baselines/dmpnn/logs/exp_221/final_scores.json:
+        cache: false
+
